@@ -12,6 +12,7 @@
 
 code/bin/
 code/inter/
+qqnames.txt
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
