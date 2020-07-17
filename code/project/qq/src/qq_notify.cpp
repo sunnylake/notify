@@ -41,6 +41,8 @@ namespace qq
 			bool ret = find_wnd(name_iter->second);
 			if (ret)
 			{
+				ShowWindow(m_hwnd, SW_SHOWNORMAL);
+				GetWindowRect(m_hwnd, &m_wnd_rect);
 				for (auto iter = args.begin(); iter != args.end(); iter++)
 				{
 					if (iter == name_iter)
@@ -51,7 +53,6 @@ namespace qq
 
 					switch (arg_type)
 					{
-						break;
 					case SEND_MESSAGE:
 						send_message(iter->second);
 						break;
@@ -123,7 +124,6 @@ namespace qq
 		{
 			return false;
 		}
-		GetWindowRect(m_hwnd, &m_wnd_rect);
 		return true;
 	}
 
